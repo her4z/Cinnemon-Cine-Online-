@@ -1,0 +1,17 @@
+.header{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    padding: 0.1em;
+}
+
+.header a{
+    color: #fff;
+    text-decoration: none;
+}
+.logo{
+    align-content: center;
+    margin-top: 1.5em;
+}

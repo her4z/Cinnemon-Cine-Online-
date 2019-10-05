@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl} from '@angular/forms';
+import {Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cinnemon';
+  bodyFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
 }

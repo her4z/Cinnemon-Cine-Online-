@@ -1,0 +1,29 @@
+.ex1{
+    width: 100%;
+    color: white;
+}
+.fr{
+    width: 100%;
+}
+.tp-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+ }
+ .tp-full-width {
+    width: 100%;
+ }
+ .inpUser{
+     width: 35em;
+     height: 2em;
+     margin-top: 15%;
+ }
+ .inpPass{
+     width: 35em;
+     height: 2em;
+     margin-top: 6%;
+ }
+ .marginInfo{
+     margin-left: 18em;
+ }
+

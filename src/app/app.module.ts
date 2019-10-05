@@ -4,17 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { IconComponent } from './components/buttons/icon/icon.component';
-import {MatButtonModule, MatDividerModule} from '@angular/material';
+import {MatInputModule} from '@angular/material'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    IconComponent,
+    IconComponent,    
   ],
   imports: [
     BrowserModule,
-    MatButtonModule,
-    MatDividerModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

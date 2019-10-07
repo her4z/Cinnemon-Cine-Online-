@@ -1,12 +1,20 @@
+<style>
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+</style>
 <div>
     <app-header></app-header>
 </div>
 <br>
+<h2>Inicio de sesion</h2>
+
 <div class="container">
    <div class="marginInfo">
-      <input class = "inpUser" type="email" placeholder="Correo electronico o usuario">
+      <p class="user">Correo electronico o usuario</p>
+      <input class = "inpUser" type="email">
       <br>
-      <input class = "inpPass" type="password" placeholder="Contraseña">
+      <p class="pass">Contraseña</p>
+      <input class = "inpPass" type="password">
+      <br>
+      <button mat-button class="btnLogin">Iniciar Sesion</button>
    </div>
-
 </div>

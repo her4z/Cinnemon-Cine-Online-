@@ -6,11 +6,14 @@ import { IconComponent } from './components/buttons/icon/icon.component';
 import {MatInputModule} from '@angular/material'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material';
+import { LoginComponent } from './login/login.component';
+import {AppRoutingModule} from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    IconComponent
+    IconComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,6 +21,7 @@ import {MatButtonModule} from '@angular/material';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    AppRoutingModule
     
   ],
   providers: [],

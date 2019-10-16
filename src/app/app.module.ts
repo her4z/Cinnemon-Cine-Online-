@@ -8,12 +8,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import {AppRoutingModule} from './app-routing.module';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     IconComponent,
     LoginComponent,
+    CreateAccountComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

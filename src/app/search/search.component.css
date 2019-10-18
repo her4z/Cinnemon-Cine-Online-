@@ -1,0 +1,21 @@
+
+.infopelicula{
+    width: 40%;
+    margin-left: 3%;
+    margin-top: 1em;
+    color: white;
+    background-color: white;
+}
+.selpelicula{
+    width: 100%;
+    color: white;
+}
+.infodia{
+    width: 40%;
+    margin-left: 12%;
+}
+.info-container{
+    width: 80%;
+    margin: 0 auto;
+    height: 20em;
+}

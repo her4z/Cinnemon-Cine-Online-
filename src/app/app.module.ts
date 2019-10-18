@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import {AppRoutingModule} from './app-routing.module';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { SearchComponent } from './search/search.component';
+import {MatCardModule, MatCard} from '@angular/material/card'
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,11 +25,15 @@ import { SearchComponent } from './search/search.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatCardModule
     
   ],
   providers: [],

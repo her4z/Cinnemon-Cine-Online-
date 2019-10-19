@@ -1,14 +1,14 @@
-<h1 style="color: white; text-align: center;">Busque funciones</h1>
-<mat-card class="info-container">
-    <br>
-    <mat-form-field class="infopelicula">
-        <mat-select class="selpelicula" placeholder="Seleccione una pelicula">
-            <mat-option value="IT2">IT 2</mat-option>
-        </mat-select>
-    </mat-form-field> 
-    <mat-form-field class="infodia">
-            <mat-select class="seldia" placeholder="Seleccione una fecha">
-                <mat-option value="14022019">14/02/2019</mat-option>
-            </mat-select>
-        </mat-form-field>           
-</mat-card>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+</style>
+<div class="info-container">
+     <a class="it2-poster" [routerLink]="['/create-account']">
+        <img src="assets/img/IT2_poster.jpg">
+        <p class="it2-p">IT 2</p>
+     </a>
+     <a class="hp-poster" [routerLink]="['/create-account']">
+        <img style="width: 210px; height: 300px;" src="assets/img/HP_poster.jpg">
+        <p class="hp-p">Harry Potter y la piedra filosofal</p>
+    </a>
+</div>
+

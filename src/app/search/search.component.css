@@ -1,21 +1,16 @@
 
-.infopelicula{
-    width: 40%;
-    margin-left: 3%;
-    margin-top: 1em;
-    color: white;
-    background-color: white;
-}
-.selpelicula{
-    width: 100%;
-    color: white;
-}
-.infodia{
-    width: 40%;
-    margin-left: 12%;
-}
 .info-container{
     width: 80%;
     margin: 0 auto;
     height: 20em;
+    margin-top: 4em;
+    color:black;
+}
+.it2-poster{
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    width: 10em;
+}
+.it2-p{
+    font-size: 1.5em;
 }

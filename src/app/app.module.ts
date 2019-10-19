@@ -13,7 +13,8 @@ import { SearchComponent } from './search/search.component';
 import {MatCardModule, MatCard} from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     AppRoutingModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
     
   ],
   providers: [],

@@ -12,9 +12,12 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { SearchComponent } from './search/search.component';
 import {MatCardModule, MatCard} from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select';
+import {MatOptionModule} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material';
+import { SelectedMovieComponent } from './selected-movie/selected-movie.component';
+import {MatToolbarModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +26,7 @@ import {MatIconModule} from '@angular/material';
     LoginComponent,
     CreateAccountComponent,
     SearchComponent,
+    SelectedMovieComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import {MatIconModule} from '@angular/material';
     MatSelectModule,
     MatFormFieldModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatOptionModule,
+    MatToolbarModule
     
   ],
   providers: [],

@@ -13,5 +13,11 @@ export class AppComponent {
     Validators.required,
     Validators.email,
   ]);
+  showit2: boolean = false;
+  it2picked(){
+    this.showit2 = true;
+  }
+  
+
 }
 

@@ -1,0 +1,45 @@
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-left: 15%;
+    margin-top: -30%;
+}
+.select-fechas{
+    background-color: white;
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+.movie-container{
+    margin-top: 5%;
+    width: 40%;
+    height: 35em;
+    margin-left:50%;
+}
+.movie-img{
+    width: 270px;
+    height: 400px;
+    margin-left: 4%;
+    max-width: 270px;
+    max-height: 400px;
+    margin-top: 5%;
+}
+.movie{
+    margin-left: 45%;
+    margin-top: -58%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+}
+.movie-summary{
+    margin-left: 45%;
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+}
+.movie-info{
+    margin-left: 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em;
+    max-width: 270px;
+}

@@ -1,22 +1,26 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 </style>
+<a class="logout" [routerLink]="['/login']" >Cerrar sesion</a>
 <mat-card class="info-container">
-     <a class="it2-poster" [routerLink]="['/create-account']">
-        <img src="assets/img/IT2_poster.jpg">
-        <p class="it2-p">IT 2</p>
-     </a>
-     <a class="hp-poster" [routerLink]="['/create-account']">
-        <img style="width: 210px; height: 300px;" src="assets/img/HP_poster.jpg">
-        <p class="hp-p">Harry Potter y la piedra filosofal</p>
-    </a>
-    <a class="elresplandor-poster" [routerLink]="['/create-account']">
-        <img style="width: 210px; height: 300px;" src="assets/img/ELRESPLANDOR_poster.jpg">
-        <p class="elresplandor-p">El resplandor</p>
-    </a>
-    <a class="unacuestiondetiempo-poster" [routerLink]="['/create-account']">
-        <img style="width: 210px; height: 300px;" src="assets/img/UNACUESTIONDETIEMPO_poster.jpg">
-        <p class="hp-p">Una cuestion de tiempo</p>
-    </a>
+    <div class="movies-container">
+         <a (click)="it2picked()" class="it2-poster" [routerLink]="['/selected-movie']">
+            <img src="assets/img/IT2_poster.jpg">
+            <p class="it2-p">IT 2</p>
+         </a>
+         <a class="hp-poster" [routerLink]="['/selected-movie']">
+            <img style="width: 210px; height: 300px;" src="assets/img/HP_poster.jpg">
+            <p class="hp-p">Harry Potter y la piedra filosofal</p>
+         </a>
+        <a class="elresplandor-poster" [routerLink]="['/selected-movie']">
+            <img style="width: 210px; height: 300px;" src="assets/img/ELRESPLANDOR_poster.jpg">
+            <p class="elresplandor-p">El resplandor</p>
+        </a>
+        <a class="unacuestiondetiempo-poster" [routerLink]="['/selected-movie']">
+            <img style="width: 210px; height: 300px;" src="assets/img/UNACUESTIONDETIEMPO_poster.jpg">
+            <p class="hp-p">Una cuestion de tiempo</p>
+        </a>
+        
+    </div>
 </mat-card>
 

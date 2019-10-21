@@ -1,18 +1,22 @@
-
+.logout {
+    margin-left: 85%;
+    text-decoration-color: white;
+    color: #fff ;
+    font-size: 1.150em;
+    border-radius: 0.3em !important;
+    border: 0.1em solid white;
+}
 .info-container{
     width: 90%;
     margin: 0 auto;
-    height: 60%;
     margin-bottom: 5%;
-    margin-top: 4em;
+    margin-top: 5em;
     color:black;
     border-radius: 0.5em !important;
     border: 0.3em solid grey;
     background-color: black;
 }
-.it2-poster{
 
-}
 p{
     font-size: 1.2em;
     font-family: 'Oswald', sans-serif;
@@ -22,7 +26,13 @@ p{
 }
 a{
     display: inline-block;
-    margin-left: 8em;
+    margin-left: 6%;
+    margin-right: 6%;
     text-align: center;
     margin-top: 2em;
+    text-decoration-color: white;
 }
+.movies-container{
+    align-content: center;
+}
+

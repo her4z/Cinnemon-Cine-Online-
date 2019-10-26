@@ -9,37 +9,38 @@ h1{
     width: 30%;
     margin-left: 10%;
     margin-top: 5%;
-
 }
 .movie-container{
     margin-top: 5%;
-    width: 40%;
-    height: 35em;
+    width: 45%;
+    height: 30%;
     margin-left:50%;
+    margin-bottom: 5%;
 }
 .movie-img{
-    width: 270px;
-    height: 400px;
-    margin-left: 4%;
-    max-width: 270px;
-    max-height: 400px;
+    width: 225px;
+    height: 350px;
+    margin-left: 2%;
+    max-width: 225px;
+    max-height: 350px;
     margin-top: 5%;
 }
 .movie{
     margin-left: 45%;
-    margin-top: -58%;
+    margin-top: -65%;
     font-family: 'Oswald', sans-serif;
     font-size: 3em;
 }
 .movie-summary{
     margin-left: 45%;
-    width: 50%;
+    width: 55%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 .movie-info{
-    margin-left: 4%;
+    margin-left: 2.5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7em;
-    max-width: 270px;
+    max-width: 225px;
+    margin-top: -5%;
 }

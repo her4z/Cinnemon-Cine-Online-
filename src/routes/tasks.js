@@ -51,9 +51,10 @@ router.delete("/tasks/:id", (req, res, next) =>{
 
 // PUT (ALTA)
 
-router.put("/taks/:id", (req, res, next) => {
+router.put("/tasks/:id", (req, res, next) => {
     const task = req.body;
     const updateTask = {};
+
     if(task.isDone) {
         updateTask.isDone = task.isDone;
     }
@@ -62,17 +63,16 @@ router.put("/taks/:id", (req, res, next) => {
     }
     if (!updateTask){
         res.status(400).json({
-            error: "Bad request"
+            error: "Bad request" 
         });
     } else {
-        db.tasks.update({_id: mongojs.ObjectID(req.params.id)}, (err, task) => {
+        db.tasks.replaceOne({_id: mongojs.ObjectID(req.params.id)}, updateTask ,(err, task) => {
             if (err) return next(err);
             res.json(task);
 
         });
 
     }
-
 
 });
 

@@ -20,7 +20,7 @@ export class TasksService {
 
   }
   deleteTask(id) {
-    return this.http.delete(`${this.domain}/api/tasks/${id}`)
+    return this.http.delete<Task>(`${this.domain}/api/tasks/${id}`)
     .pipe(map(res => res));
   }
   updateTask(newTask) {

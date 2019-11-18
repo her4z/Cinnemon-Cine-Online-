@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"addTask($event)\">\n    <div class=\"input-group\">\n        <input type=\"text\" name=\"title\" [(ngModel)]=\"title\" placeholder=\"Add Task\" class=\"form-control\">\n        <span class=\"input-group-addon\">\n            <button type=\"submit\" class=\"btn btn-primary\">Add Task</button>\n        </span>\n    </div>\n</form>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"addTask($event)\">\n    <div class=\"input-group\">\n        <input type=\"text\" name=\"title\" [(ngModel)]=\"title\" placeholder=\"Add Task\" class=\"form-control\">\n        <span class=\"input-group-addon\">\n            <button type=\"submit\" class=\"btn btn-primary\">Add Task</button>\n        </span>\n    </div>\n    <table class=\"table\">\n        <thead>\n            <tr>\n                <th>Estado</th>\n                <th>Titulo</th>\n                <th>Operaciones</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let task of tasks\">\n                <td>\n                    <input  type=\"checkbox\" [checked]=\"task.isDone\" (click)=\"updateTask(task)\">\n                </td>\n                <td style=\"color:white;\">\n                    {{ task.title }}\n                </td>\n                <td>\n                    <button class=\"btn btn-danger\" (click)=\"deleteTask(task._id)\">\n                        Eliminar\n                    </button>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n</form>\n");
 
 /***/ }),
 
@@ -927,6 +927,35 @@ let TestRestAPIComponent = class TestRestAPIComponent {
         this.taskService.addTask(newTask)
             .subscribe(task => {
             this.tasks.push(task);
+            this.title = "";
+        });
+    }
+    deleteTask(id) {
+        const tasks = this.tasks;
+        this.taskService.deleteTask(id)
+            .subscribe(data => {
+            const response = confirm("Seguro que deseas eliminar la tarea?");
+            if (response) {
+                if (data.n == 1) {
+                    for (let i = 0; i < tasks.length; i++) {
+                        if (tasks[i]._id = id) {
+                            tasks.splice(i, 1);
+                        }
+                    }
+                }
+                return;
+            }
+        });
+    }
+    updateTask(task) {
+        const newTask = {
+            _id: task._id,
+            title: task.title,
+            isDone: !task.isDone
+        };
+        this.taskService.updateTask(newTask)
+            .subscribe(res => {
+            task.isDone = !task.isDone;
         });
     }
 };

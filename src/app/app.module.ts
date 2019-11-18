@@ -18,6 +18,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material';
 import { SelectedMovieComponent } from './selected-movie/selected-movie.component';
 import {MatToolbarModule} from '@angular/material';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import {TasksService } from './tasks.service';
+import { TestRestAPIComponent } from './test-rest-api/test-rest-api.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +31,7 @@ import {MatToolbarModule} from '@angular/material';
     CreateAccountComponent,
     SearchComponent,
     SelectedMovieComponent,
+    TestRestAPIComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +46,11 @@ import {MatToolbarModule} from '@angular/material';
     MatCardModule,
     MatIconModule,
     MatOptionModule,
-    MatToolbarModule
-    
+    MatToolbarModule,
+    FlexLayoutModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [TasksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

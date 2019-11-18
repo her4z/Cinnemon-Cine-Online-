@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl} from '@angular/forms';
-import {Validators} from '@angular/forms'
+import {Validators} from '@angular/forms';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,7 @@ export class AppComponent {
     Validators.required,
     Validators.email,
   ]);
-  showit2: boolean = false;
-  it2picked(){
-    this.showit2 = true;
-  }
+  constructor(private http: HttpClient) { }
   
 
 }

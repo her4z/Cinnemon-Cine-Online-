@@ -1,3 +1,23 @@
-p{
+
+.container{
+    margin-top: 4%;
+}
+.title{
+    font-family: 'Oswald', sans-serif;
     color: white;
+    font-size: xx-large;
+    margin-bottom: 5%;
+}
+.data-form{
+    background-color: rgb(28, 28, 26);
+    text-align: center;
+}
+.inpPass{
+    margin-top: 10%;
+}
+.btnCrearCuenta{
+    margin-top: 6%;
+    background-color: rgb(89, 89, 83);
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
 }

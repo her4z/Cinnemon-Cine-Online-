@@ -22,6 +22,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import {TasksService } from './tasks.service';
 import { TestRestAPIComponent } from './test-rest-api/test-rest-api.component';
+import {MatSidenavModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { TestRestAPIComponent } from './test-rest-api/test-rest-api.component';
     MatToolbarModule,
     FlexLayoutModule,
     HttpClientModule,
+    MatSidenavModule
   ],
   providers: [TasksService],
   bootstrap: [AppComponent]

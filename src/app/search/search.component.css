@@ -1,16 +1,16 @@
 .logout {
+    margin-top: 4%;
     margin-left: 85%;
-    text-decoration-color: white;
-    color: #fff ;
-    font-size: 1.150em;
-    border-radius: 0.3em !important;
-    border: 0.1em solid white;
+    background-color: rgb(89, 89, 83);
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    color: white;
 }
 .info-container{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 5%;
-    margin-top: 5em;
+    margin-top: 4%;
     color:black;
     border-radius: 0.5em !important;
     border: 0.3em solid grey;

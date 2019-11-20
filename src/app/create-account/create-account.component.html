@@ -1,1 +1,18 @@
-<h1 style="color: white; text-align: center;">Llene los campos para registrarse</h1>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+</style>
+<form (submit)="addUser($event)">
+    <div fxLayout="column" fxFlex="20%" class="left-margin"></div>
+    <div fxLayout="column" fxFlex=60% class="container">
+        <mat-form-field>
+            <mat-card class="data-form">
+                <label class="title">Registre una cuenta nueva</label>
+                <input type="text" name="user" [(ngModel)]="user" class="form-control inpUser" placeholder="Usuario">
+                <input type="text" name="pass" [(ngModel)]="pass" class="form-control inpPass" placeholder="Contraseña">
+                <button mat-button type="submit" class="btnCrearCuenta">Registrarse</button>
+            </mat-card>
+        </mat-form-field>
+    </div>
+    <div fxLayout="column" fxFlex="20%" height="60" class="right-margin"></div>
+    <div style="margin-bottom: 5%;"></div>
+</form>

@@ -1,17 +1,20 @@
-<div class="container">
-    <div class="marginInfo">
-       <p class="user">Correo electronico o usuario</p>
-       <input class = "inpUser" type="email">
-       <br>
-       <p class="pass">Contraseña</p>
-       <input class = "inpPass" type="password">
-       <br>
-       <button [routerLink]="['/search']" mat-button class="btnLogin">Iniciar Sesion</button>
-       <p class="crearcuenta">
-          <label>¿No tenés cuenta?</label>
-          <a [routerLink]="['/create-account']"  style="margin-left: 0.5em" >Crear cuenta</a>
-
-       </p>
+<form (submit)="loginUser($event)" > 
+   <div class="container">
+       <div class="marginInfo">
+          <p class="user">Usuario</p>
+          <input class = "inpUser" type="email" name="user" [(ngModel)]="user">
+          <br>
+          <p class="pass">Contraseña</p>
+          <input class = "inpPass" name="pass" [(ngModel)]="pass">
+          <br>
+          <button type="submit" [routerLink]="['/search']" mat-button class="btnLogin">Iniciar Sesion</button>
+          <p class="crearcuenta">
+             <label>¿No tenés cuenta?</label>
+             <a [routerLink]="['/create-account']"  style="margin-left: 0.5em" >Crear cuenta</a>
+   
+          </p>
+       </div>
+       <a [routerLink]="['/test-rest-api']">test</a>
     </div>
-    <a [routerLink]="['/test-rest-api']">test</a>
- </div>
+
+</form>

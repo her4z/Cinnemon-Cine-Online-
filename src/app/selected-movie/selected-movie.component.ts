@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieSelected } from '../MovieSelected';
 
 @Component({
   selector: 'app-selected-movie',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selected-movie.component.css']
 })
 export class SelectedMovieComponent implements OnInit {
+  movie: MovieSelected[];
 
   constructor() { }
 

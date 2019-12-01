@@ -61,7 +61,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<style>\n    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');\n</style>\n<form (submit)=\"addUser($event)\">\n    <div fxLayout=\"column\" fxFlex=\"20%\" class=\"left-margin\"></div>\n    <div fxLayout=\"column\" fxFlex=60% class=\"container\">\n        <mat-form-field>\n            <mat-card class=\"data-form\">\n                <label class=\"title\">Registre una cuenta nueva</label>\n                <input type=\"text\" name=\"user\" [(ngModel)]=\"user\" class=\"form-control inpUser\" placeholder=\"Usuario\">\n                <input type=\"text\" name=\"pass\" [(ngModel)]=\"pass\" class=\"form-control inpPass\" placeholder=\"Contraseña\">\n                <button mat-button type=\"submit\" class=\"btnCrearCuenta\">Registrarse</button>\n            </mat-card>\n        </mat-form-field>\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"20%\" height=\"60\" class=\"right-margin\"></div>\n    <div style=\"margin-bottom: 5%;\"></div>\n</form>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<style>\n    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');\n</style>\n<form (submit)=\"addUser($event)\">\n    <div fxLayout=\"column\" fxFlex=\"20%\" class=\"left-margin\"></div>\n    <div fxLayout=\"column\" fxFlex=60% class=\"container\">\n        <mat-form-field>\n            <mat-card class=\"data-form\">\n                <label class=\"title\">Registre una cuenta nueva</label>\n                <input type=\"text\" name=\"user\" [(ngModel)]=\"user\" class=\"form-control inpUser\" placeholder=\"Usuario\">\n                <input type=\"password\" name=\"pass\" [(ngModel)]=\"pass\" class=\"form-control inpPass\" placeholder=\"Contraseña\">\n                <button mat-button type=\"submit\" class=\"btnCrearCuenta\">Registrarse</button>\n            </mat-card>\n        </mat-form-field>\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"20%\" height=\"60\" class=\"right-margin\"></div>\n    <div style=\"margin-bottom: 5%;\"></div>\n</form>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html": 
@@ -72,7 +72,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n    <div class=\"marginInfo\">\r\n       <p class=\"user\">Correo electronico o usuario</p>\r\n       <input class = \"inpUser\" type=\"email\">\r\n       <br>\r\n       <p class=\"pass\">Contraseña</p>\r\n       <input class = \"inpPass\" type=\"password\">\r\n       <br>\r\n       <button [routerLink]=\"['/search']\" mat-button class=\"btnLogin\">Iniciar Sesion</button>\r\n       <p class=\"crearcuenta\">\r\n          <label>¿No tenés cuenta?</label>\r\n          <a [routerLink]=\"['/create-account']\"  style=\"margin-left: 0.5em\" >Crear cuenta</a>\r\n\r\n       </p>\r\n    </div>\r\n    <a [routerLink]=\"['/test-rest-api']\">test</a>\r\n </div>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"loginUser($event)\" > \r\n   <div class=\"container\">\r\n       <div class=\"marginInfo\">\r\n          <p class=\"user\">Usuario</p>\r\n          <input class = \"inpUser\" type=\"email\" name=\"user\" [(ngModel)]=\"user\">\r\n          <br>\r\n          <p class=\"pass\">Contraseña</p>\r\n          <input class = \"inpPass\" name=\"pass\" [(ngModel)]=\"pass\">\r\n          <br>\r\n          <button type=\"submit\" [routerLink]=\"['/search']\" mat-button class=\"btnLogin\">Iniciar Sesion</button>\r\n          <p class=\"crearcuenta\">\r\n             <label>¿No tenés cuenta?</label>\r\n             <a [routerLink]=\"['/create-account']\"  style=\"margin-left: 0.5em\" >Crear cuenta</a>\r\n   \r\n          </p>\r\n       </div>\r\n       <a [routerLink]=\"['/test-rest-api']\">test</a>\r\n    </div>\r\n\r\n</form>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/search/search.component.html": 
@@ -83,7 +83,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<style>\r\n    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');\r\n</style>\r\n<button mat-button class=\"logout\" [routerLink]=\"['/login']\" >Cerrar sesion</button>\r\n<mat-card class=\"info-container\">\r\n    <div class=\"movies-container\">\r\n         <a class=\"it2-poster\" [routerLink]=\"['/selected-movie']\">\r\n            <img src=\"assets/img/IT2_poster.jpg\">\r\n            <p class=\"it2-p\">IT 2</p>\r\n         </a>\r\n         <a class=\"hp-poster\" [routerLink]=\"['/selected-movie']\">\r\n            <img style=\"width: 210px; height: 300px;\" src=\"assets/img/HP_poster.jpg\">\r\n            <p class=\"hp-p\">Harry Potter y la piedra filosofal</p>\r\n         </a>\r\n        <a class=\"elresplandor-poster\" [routerLink]=\"['/selected-movie']\">\r\n            <img style=\"width: 210px; height: 300px;\" src=\"assets/img/ELRESPLANDOR_poster.jpg\">\r\n            <p class=\"elresplandor-p\">El resplandor</p>\r\n        </a>\r\n        <a class=\"unacuestiondetiempo-poster\" [routerLink]=\"['/selected-movie']\">\r\n            <img style=\"width: 210px; height: 300px;\" src=\"assets/img/UNACUESTIONDETIEMPO_poster.jpg\">\r\n            <p class=\"hp-p\">Una cuestion de tiempo</p>\r\n        </a>\r\n        \r\n    </div>\r\n</mat-card>\r\n\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<style>\r\n    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');\r\n</style>\r\n<form>\r\n    <button mat-button class=\"logout\" [routerLink]=\"['/login']\" >Cerrar sesion</button>\r\n    <mat-card class=\"info-container\">\r\n        <div class=\"movies-container\">\r\n            <a class=\"it2-poster\" [routerLink]=\"['/selected-movie']\">\r\n                <img src=\"assets/img/IT2_poster.jpg\">\r\n                <p class=\"it2-p\">IT 2</p>\r\n            </a>\r\n            <a (click)=\"movieSelected('2')\" class=\"hp-poster\" [routerLink]=\"['/selected-movie']\">\r\n                <img style=\"width: 210px; height: 300px;\" src=\"assets/img/HP_poster.jpg\">\r\n                <p class=\"hp-p\">Harry Potter y la piedra filosofal</p>\r\n             </a>\r\n            <a class=\"elresplandor-poster\" [routerLink]=\"['/selected-movie']\">\r\n                <img style=\"width: 210px; height: 300px;\" src=\"assets/img/ELRESPLANDOR_poster.jpg\">\r\n                <p class=\"elresplandor-p\">El resplandor</p>\r\n            </a>\r\n            <a class=\"unacuestiondetiempo-poster\" [routerLink]=\"['/selected-movie']\">\r\n                <img style=\"width: 210px; height: 300px;\" src=\"assets/img/UNACUESTIONDETIEMPO_poster.jpg\">\r\n                <p class=\"hp-p\">Una cuestion de tiempo</p>\r\n            </a>\r\n            \r\n        </div>\r\n    </mat-card>\r\n\r\n</form>\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/selected-movie/selected-movie.component.html": 
@@ -94,7 +94,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<link href=\"https://fonts.googleapis.com/css?family=Oswald&display=swap\" rel=\"stylesheet\">\r\n<link href=\"https://fonts.googleapis.com/css?family=Montserrat&display=swap\" rel=\"stylesheet\">\r\n<div fxLayout=\"column\" fxFlex=\"10%\" fxLayoutGap=\"0\"></div>\r\n<div class=\"title\" fxLayout=\"column\" fxFlex=25% fxLayoutWrap>\r\n    <mat-label class=\"lbhorario\">Seleccione una función</mat-label>\r\n    <mat-select class=\"select-fecha\" placeholder=\"Fecha\">\r\n        <mat-option [value]=\"14/11/2019\">14/11/2019</mat-option>\r\n        <mat-option [value]=\"23/05/2018\">23/05/2018</mat-option>\r\n    </mat-select>\r\n    <mat-select class=\"select-funcion\" placeholder=\"Función\" >\r\n        <mat-option>2D IT 2 SUBTITULADO</mat-option>\r\n        <mat-option>2D IT 2 CASTELLANO</mat-option>\r\n        <mat-option>3D IT 2 CASTELLANO</mat-option>\r\n    </mat-select>\r\n    <mat-select class=\"select-hora\" placeholder=\"Horario\">\r\n        <mat-option>11:30 hs</mat-option>\r\n    </mat-select>\r\n    <button mat-button class=\"btn-select\">Seleccionar</button>\r\n</div>\r\n<div fxLayout=\"column\" fxFlex=\"10%\">\r\n\r\n</div>\r\n<mat-card class=\"movie-container\" fxLayout=\"column\"  fxFlex=\"50%\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0\">\r\n    \r\n    <h2 class=\"movie\">IT 2</h2>\r\n    <p  class= \"movie-summary\"> El mal resurge en Derry con IT CAPÍTULO DOS: el director Andy Muschietti reúne al Club de los Perdedores (jóvenes y adultos) y vuelve al momento en que todo comenzó. El film es la continuación de Muschietti para \"IT (Eso)\", el masivo éxito taquillero a nivel mundial, aclamado por las críticas, que estrenó en 2017 y acumuló un total bruto de más de USD 700 millones en todo el mundo. \"IT (Eso)\" redefine y transciende el género; así, se convirtió en parte de la cultura y también en la película de horror con mayores ganancias en la historia del cine. Dado que el mal vuelve al pueblo de Derry, Maine, cada 27 años, \"IT CAPÍTULO DOS\" vuelve a reunir a los personajes (que se separaron hace mucho tiempo) ya de adultos, casi tres décadas después de los eventos de la primera película.</p>\r\n    <p class=\"movie-info\">\r\n        Genero: Terror\r\n        <br>\r\n        Duracion: 170min\r\n        <br>\r\n        Actores: James Mc Avoy, Jessica Chastain, Bill Skargard, Finn Wolfhard\r\n        <br>\r\n        Director: Andy Muschietti\r\n    </p>\r\n</mat-card>\r\n\r\n\r\n\r\n\r\n<div></div>\r\n\r\n\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<link href=\"https://fonts.googleapis.com/css?family=Oswald&display=swap\" rel=\"stylesheet\">\r\n<link href=\"https://fonts.googleapis.com/css?family=Montserrat&display=swap\" rel=\"stylesheet\">\r\n<div fxLayout=\"column\" fxFlex=\"10%\" fxLayoutGap=\"0\"></div>\r\n<div class=\"title\" fxLayout=\"column\" fxFlex=25% fxLayoutWrap>\r\n    <mat-label class=\"lbhorario\">Seleccione una función</mat-label>\r\n    <mat-select class=\"select-fecha\" placeholder=\"Fecha\">\r\n        <mat-option [value]=\"14/11/2019\">14/11/2019</mat-option>\r\n        <mat-option [value]=\"23/05/2018\">23/05/2018</mat-option>\r\n    </mat-select>\r\n    <mat-select class=\"select-funcion\" placeholder=\"Tipo\" >\r\n        <mat-option>2D IT 2 SUBTITULADO</mat-option>\r\n        <mat-option>2D IT 2 CASTELLANO</mat-option>\r\n        <mat-option>3D IT 2 CASTELLANO</mat-option>\r\n    </mat-select>\r\n    <mat-select class=\"select-hora\" placeholder=\"Horario\">\r\n        <mat-option>11:30 hs</mat-option>\r\n    </mat-select>\r\n    <button mat-button class=\"btn-select\">Seleccionar</button>\r\n</div>\r\n<div fxLayout=\"column\" fxFlex=\"10%\">\r\n\r\n</div>\r\n<mat-card class=\"movie-container\" fxLayout=\"column\"  fxFlex=\"50%\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0\">\r\n     \r\n    <h2 class=\"movie\">IT 2</h2>\r\n    <p  class= \"movie-summary\"> El mal resurge en Derry con IT CAPÍTULO DOS: el director Andy Muschietti reúne al Club de los Perdedores (jóvenes y adultos) y vuelve al momento en que todo comenzó. El film es la continuación de Muschietti para \"IT (Eso)\", el masivo éxito taquillero a nivel mundial, aclamado por las críticas, que estrenó en 2017 y acumuló un total bruto de más de USD 700 millones en todo el mundo. \"IT (Eso)\" redefine y transciende el género; así, se convirtió en parte de la cultura y también en la película de horror con mayores ganancias en la historia del cine. Dado que el mal vuelve al pueblo de Derry, Maine, cada 27 años, \"IT CAPÍTULO DOS\" vuelve a reunir a los personajes (que se separaron hace mucho tiempo) ya de adultos, casi tres décadas después de los eventos de la primera película.</p>\r\n    <p class=\"movie-info\">\r\n        Genero: Terror\r\n        <br>\r\n        Duracion: 170min\r\n        <br>\r\n        Actores: James Mc Avoy, Jessica Chastain, Bill Skargard, Finn Wolfhard\r\n        <br>\r\n        Director: Andy Muschietti\r\n    </p>\r\n</mat-card>\r\n\r\n\r\n\r\n\r\n<div></div>\r\n\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/test-rest-api/test-rest-api.component.html": 
@@ -105,7 +105,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"addTask($event)\">\n    <div class=\"input-group\">\n        <input type=\"text\" name=\"title\" [(ngModel)]=\"title\" placeholder=\"Add Task\" class=\"form-control\">\n        <span class=\"input-group-addon\">\n            <button type=\"submit\" class=\"btn btn-primary\">Add Task</button>\n        </span>\n    </div>\n    <table class=\"table\">\n        <thead>\n            <tr>\n                <th>Estado</th>\n                <th>Titulo</th>\n                <th>Operaciones</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let task of tasks\">\n                <td>\n                    <input  type=\"checkbox\" [checked]=\"task.isDone\" (click)=\"updateTask(task)\">\n                </td>\n                <td style=\"color:white;\">\n                    {{ task.title }}\n                </td>\n                <td>\n                    <button class=\"btn btn-danger\" (click)=\"deleteTask(task._id)\">\n                        Eliminar\n                    </button>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n</form>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"addTask($event)\">\r\n    <div class=\"input-group\">\r\n        <input type=\"text\" name=\"title\" [(ngModel)]=\"title\" placeholder=\"Add Task\" class=\"form-control\">\r\n        <span class=\"input-group-addon\">\r\n            <button type=\"submit\" class=\"btn btn-primary\">Add Task</button>\r\n        </span>\r\n    </div>\r\n    <table class=\"table\">\r\n        <thead>\r\n            <tr>\r\n                <th>Estado</th>\r\n                <th>Titulo</th>\r\n                <th>Operaciones</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr *ngFor=\"let task of tasks\">\r\n                <td>\r\n                    <input  type=\"checkbox\" [checked]=\"task.isDone\" (click)=\"updateTask(task)\">\r\n                </td>\r\n                <td style=\"color:white;\">\r\n                    {{ task.title }}\r\n                </td>\r\n                <td>\r\n                    <button class=\"btn btn-danger\" (click)=\"deleteTask(task._id)\">\r\n                        Eliminar\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</form>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/tslib/tslib.es6.js": 
@@ -729,13 +729,36 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function () { return LoginComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../users.service */ "./src/app/users.service.ts");
             var LoginComponent = /** @class */ (function () {
-                function LoginComponent() {
+                function LoginComponent(usersService) {
+                    var _this = this;
+                    this.usersService = usersService;
+                    this.usersService.getUsers()
+                        .subscribe(function (users) {
+                        _this.users = users;
+                    });
                 }
                 LoginComponent.prototype.ngOnInit = function () {
                 };
+                LoginComponent.prototype.loginUser = function (event) {
+                    event.preventDefault();
+                    var User = {
+                        user: this.user,
+                        pass: this.pass
+                    };
+                    this.usersService.authUser(User.user)
+                        .subscribe(function (user) {
+                        if (user.user == User.user || user.pass == User.user) {
+                            console.log("logged succesfully");
+                        }
+                    });
+                };
                 return LoginComponent;
             }());
+            LoginComponent.ctorParameters = function () { return [
+                { type: _users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }
+            ]; };
             LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-login',
@@ -743,6 +766,46 @@
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")).default]
                 })
             ], LoginComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/movies.service.ts": 
+        /*!***********************************!*\
+          !*** ./src/app/movies.service.ts ***!
+          \***********************************/
+        /*! exports provided: MoviesService */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MoviesService", function () { return MoviesService; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+            var MoviesService = /** @class */ (function () {
+                function MoviesService(http) {
+                    this.http = http;
+                    this.domain = "https://localhost:3000";
+                }
+                //Trae todas las peliculas existentes.
+                MoviesService.prototype.getMovies = function () {
+                    return this.http.get(this.domain + "/api/movies")
+                        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res; }));
+                };
+                //Trae una pelicula segun su ID.
+                MoviesService.prototype.getMovie = function (id) {
+                    return this.http.get(this.domain + "/api/movies/" + id)
+                        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res; }));
+                };
+                return MoviesService;
+            }());
+            MoviesService.ctorParameters = function () { return [
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+            ]; };
+            MoviesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+                    providedIn: 'root'
+                })
+            ], MoviesService);
             /***/ 
         }),
         /***/ "./src/app/search/search.component.css": 
@@ -767,13 +830,31 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchComponent", function () { return SearchComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _movies_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../movies.service */ "./src/app/movies.service.ts");
             var SearchComponent = /** @class */ (function () {
-                function SearchComponent() {
+                function SearchComponent(moviesService) {
+                    var _this = this;
+                    this.moviesService = moviesService;
+                    this.moviesService.getMovies()
+                        .subscribe(function (movies) {
+                        _this.movies = movies;
+                    });
                 }
                 SearchComponent.prototype.ngOnInit = function () {
                 };
+                SearchComponent.prototype.movieSelected = function (id) {
+                    var _this = this;
+                    this.moviesService.getMovie(id)
+                        .subscribe(function (movie) {
+                        console.log(movie);
+                        _this.movie = movie;
+                    });
+                };
                 return SearchComponent;
             }());
+            SearchComponent.ctorParameters = function () { return [
+                { type: _movies_service__WEBPACK_IMPORTED_MODULE_2__["MoviesService"] }
+            ]; };
             SearchComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-search',
@@ -975,10 +1056,17 @@
                     this.http = http;
                     this.domain = "http://localhost:3000";
                 }
+                //Trae todos los usuarios(en la practica no seria utilizado)
                 UsersService.prototype.getUsers = function () {
                     return this.http.get(this.domain + "/api/users")
                         .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res; }));
                 };
+                //Trae la informacion de un usuario segun el usuario.
+                UsersService.prototype.authUser = function (user) {
+                    return this.http.get(this.domain + "/api/users/" + user)
+                        .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res; }));
+                };
+                //Añade un usuario nuevo a la bd.
                 UsersService.prototype.addUser = function (newUser) {
                     return this.http.post(this.domain + "/api/users", newUser)
                         .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res; }));

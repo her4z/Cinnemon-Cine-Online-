@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Users } from '../Users';
 import { UsersService} from '../users.service';
 
+
 @Component({
   selector: 'app-create-account',
   templateUrl: './create-account.component.html',
@@ -21,7 +22,7 @@ export class CreateAccountComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   addUser(event) {
     event.preventDefault();
     const newUser: Users = {

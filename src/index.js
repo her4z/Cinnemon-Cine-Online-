@@ -4,6 +4,10 @@ const app = express();
 //const indexRoutes = require("./routes/index"); // Previamente usado para tersting.
 const tasksRoutes = require("./routes/tasks");
 const usersRoutes = require("./routes/users");
+const moviesRoutes = require("./routes/movies");
+const functionsRoutes = require("./routes/functions");
+const seatsSoldRoutes = require("./routes/seatsSold");
+const ticketsRoutes = require("./routes/tickets");
 const path = require("path");
 
 
@@ -22,6 +26,10 @@ app.use(express.urlencoded({extended: false}));
 //app.use(indexRoutes); // Previamente usado para testing
 app.use("/api", tasksRoutes);
 app.use("/api", usersRoutes);
+app.use("/api", moviesRoutes);
+app.use("/api", functionsRoutes);
+app.use("/api", seatsSoldRoutes);
+app.use("/api", ticketsRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, "dist")));

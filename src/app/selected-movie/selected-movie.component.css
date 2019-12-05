@@ -1,11 +1,14 @@
+.contenedor{
+    margin-left: 3%;
+    margin-right: 3%;
+}
 h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     margin-left: 15%;
-    margin-top: -30%;
 }
 .select-fecha{
-    margin-top: 20%;
+    margin-top: 10%;
     background-color: white;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -23,7 +26,7 @@ h1{
     font-family: 'Montserrat', sans-serif;
 }
 .btn-select{
-    margin-top: 20%;
+    margin-top: 15%;
     background-color: grey;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
@@ -37,12 +40,11 @@ h1{
     font-size: 2em;
 }
 .title{
+    text-align: center;
     margin-top: 5%;
 }
 .movie-container{
     margin-top: 5%;
-    width: 50%;
-    height: 30%;
     margin-bottom: 5%;
 }
 .movie-img{
@@ -66,5 +68,4 @@ h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7em;
     max-width: 225px;
-    margin-top: -5%;
 }

@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {TasksService } from './tasks.service';
 import { TestRestAPIComponent } from './test-rest-api/test-rest-api.component';
 import {MatSidenavModule} from '@angular/material';
+import { TopBarComponent } from './top-bar/top-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import {MatSidenavModule} from '@angular/material';
     CreateAccountComponent,
     SearchComponent,
     SelectedMovieComponent,
-    TestRestAPIComponent
+    TestRestAPIComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,

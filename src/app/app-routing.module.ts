@@ -6,7 +6,6 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { SearchComponent } from './search/search.component';
 import { SelectedMovieComponent } from './selected-movie/selected-movie.component';
 import { TestRestAPIComponent } from './test-rest-api/test-rest-api.component';
-
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch:'full'},
   {path:'login', component: LoginComponent},

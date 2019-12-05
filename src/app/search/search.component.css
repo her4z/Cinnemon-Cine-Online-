@@ -1,14 +1,6 @@
-.logout {
-    margin-top: 4%;
-    margin-left: 85%;
-    background-color: rgb(89, 89, 83);
-    font-family: 'Oswald', sans-serif;
-    font-size: large;
-    color: white;
-}
+
 .info-container{
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     margin-bottom: 5%;
     margin-top: 4%;
     color:black;
@@ -26,13 +18,12 @@ p{
 }
 a{
     display: inline-block;
-    margin-left: 6%;
-    margin-right: 6%;
+    padding: 3em;
     text-align: center;
     margin-top: 2em;
     text-decoration-color: white;
 }
 .movies-container{
-    align-content: center;
+    text-align: center;
 }
 

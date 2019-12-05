@@ -1,3 +1,3 @@
-hacer que las paginas sean responsives menos crear cuenta (ya esta)
-agregar q cuando cree cuenta lo mande a search
-arreglar bug apretar icono en login inicia sesion ?????
+hacer que las paginas sean responsives menos crear cuenta y login|
+arreglar bug apretar icono en login inicia sesion ????? esperar a hacer la Session del usuario para arreglarlo.
+

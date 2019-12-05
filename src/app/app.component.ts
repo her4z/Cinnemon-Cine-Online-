@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl} from '@angular/forms';
 import {Validators} from '@angular/forms';
 import { HttpClient} from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,11 @@ export class AppComponent {
     Validators.required,
     Validators.email,
   ]);
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
+
+  ngOnInit() {
+    let currentUrl = this.router.url;
+  }
   
 
 }

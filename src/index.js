@@ -7,7 +7,7 @@ const usersRoutes = require("./routes/users");
 const moviesRoutes = require("./routes/movies");
 const functionsRoutes = require("./routes/functions");
 const seatsSoldRoutes = require("./routes/seatsSold");
-const ticketsRoutes = require("./routes/tickets");
+//const ticketsRoutes = require("./routes/tickets");
 const path = require("path");
 
 
@@ -29,7 +29,7 @@ app.use("/api", usersRoutes);
 app.use("/api", moviesRoutes);
 app.use("/api", functionsRoutes);
 app.use("/api", seatsSoldRoutes);
-app.use("/api", ticketsRoutes);
+//app.use("/api", ticketsRoutes); tira error, revisar
 
 // static files
 app.use(express.static(path.join(__dirname, "dist")));

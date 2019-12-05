@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Users } from '../Users';
 import { UsersService} from '../users.service';
+import { error } from '@angular/compiler/src/util';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class CreateAccountComponent implements OnInit {
   user: string;
   pass: string;
 
-  constructor( private userService: UsersService) { 
+  constructor( private userService: UsersService, public router: Router) { 
     this.userService.getUsers()
     .subscribe(users =>{
       this.users = users
@@ -25,6 +27,11 @@ export class CreateAccountComponent implements OnInit {
   
   addUser(event) {
     event.preventDefault();
+    if(this.user == "" || this.pass == ""){
+      alert("Contraseña y/o usuario incorrecto.");
+      return;
+
+    };
     const newUser: Users = {
       user: this.user,
       pass: this.pass
@@ -35,6 +42,7 @@ export class CreateAccountComponent implements OnInit {
       this.user = "";
       this.pass = "";
     })
+    this.router.navigate(['/search']);
   }
 
 }

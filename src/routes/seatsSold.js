@@ -30,7 +30,7 @@ router.post("/seatsSold", (req, res, next) =>{
     db.seatsSold.save(seatsSold, (err, seatsSold) =>{
         if (err) return next(err);
         res.json(seatSold)
-    })
+    });
 })
 
 module.exports = router;

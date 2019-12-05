@@ -1,5 +1,6 @@
-<form (submit)="loginUser($event)" > 
-   <div class="container">
+<form (submit)="loginUser($event)" >
+   <div fxLayout="column" fxFlex="20%" class="left-margin" fxFlex.xs="10%"></div> 
+   <div class="container" fxLayout="column" fxFlex="60%" fxFlex.xs="80%">
        <div class="marginInfo">
           <p class="user">Usuario</p>
           <input class = "inpUser" type="email" name="user" [(ngModel)]="user">
@@ -7,7 +8,9 @@
           <p class="pass">Contraseña</p>
           <input class = "inpPass" name="pass" [(ngModel)]="pass">
           <br>
-          <button type="submit" [routerLink]="['/search']" mat-button class="btnLogin">Iniciar Sesion</button>
+          <div class="buttondiv">
+            <button type="submit" [routerLink]="['/search']" mat-button class="btnLogin" style="align-self: center;">Iniciar Sesion</button>
+          </div>
           <p class="crearcuenta">
              <label>¿No tenés cuenta?</label>
              <a [routerLink]="['/create-account']"  style="margin-left: 0.5em" >Crear cuenta</a>
@@ -16,5 +19,6 @@
        </div>
        <a [routerLink]="['/test-rest-api']">test</a>
     </div>
+    <div fxLayout="column" fxFlex="20%" class="margin-right" fxFlex.xs="10%"></div>
 
 </form>

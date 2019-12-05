@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<style>\n    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');\n</style>\n<form (submit)=\"addUser($event)\">\n    <div fxLayout=\"column\" fxFlex=\"20%\" class=\"left-margin\"></div>\n    <div fxLayout=\"column\" fxFlex=60% class=\"container\">\n        <mat-form-field>\n            <mat-card class=\"data-form\">\n                <label class=\"title\">Registre una cuenta nueva</label>\n                <input type=\"text\" name=\"user\" [(ngModel)]=\"user\" class=\"form-control inpUser\" placeholder=\"Usuario\">\n                <input type=\"password\" name=\"pass\" [(ngModel)]=\"pass\" class=\"form-control inpPass\" placeholder=\"Contraseña\">\n                <button mat-button type=\"submit\" class=\"btnCrearCuenta\">Registrarse</button>\n            </mat-card>\n        </mat-form-field>\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"20%\" height=\"60\" class=\"right-margin\"></div>\n    <div style=\"margin-bottom: 5%;\"></div>\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<style>\n    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');\n</style>\n<form (submit)=\"addUser($event)\">\n    <div fxLayout=\"column\" fxFlex=\"20%\" class=\"left-margin\"></div>\n    <div fxLayout=\"column\" fxFlex=60% class=\"container\">\n        <mat-form-field>\n            <mat-card class=\"data-form\">\n                <label class=\"title\">Registre una cuenta nueva</label>\n                <input type=\"text\" name=\"user\" [(ngModel)]=\"user\" class=\"form-control inpUser\" placeholder=\"Usuario\">\n                <input type=\"password\" name=\"pass\" [(ngModel)]=\"pass\" class=\"form-control inpPass\" placeholder=\"Contraseña\">\n                <button mat-button type=\"submit\" class=\"btnCrearCuenta\" >Registrarse</button>\n                \n            </mat-card>\n        </mat-form-field>\n    </div>\n    <div fxLayout=\"column\" fxFlex=\"20%\" class=\"right-margin\"></div>\n</form>\n");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"loginUser($event)\" > \r\n   <div class=\"container\">\r\n       <div class=\"marginInfo\">\r\n          <p class=\"user\">Usuario</p>\r\n          <input class = \"inpUser\" type=\"email\" name=\"user\" [(ngModel)]=\"user\">\r\n          <br>\r\n          <p class=\"pass\">Contraseña</p>\r\n          <input class = \"inpPass\" name=\"pass\" [(ngModel)]=\"pass\">\r\n          <br>\r\n          <button type=\"submit\" [routerLink]=\"['/search']\" mat-button class=\"btnLogin\">Iniciar Sesion</button>\r\n          <p class=\"crearcuenta\">\r\n             <label>¿No tenés cuenta?</label>\r\n             <a [routerLink]=\"['/create-account']\"  style=\"margin-left: 0.5em\" >Crear cuenta</a>\r\n   \r\n          </p>\r\n       </div>\r\n       <a [routerLink]=\"['/test-rest-api']\">test</a>\r\n    </div>\r\n\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form (submit)=\"loginUser($event)\" >\r\n   <div fxLayout=\"column\" fxFlex=\"20%\" class=\"left-margin\" fxFlex.xs=\"10%\"></div> \r\n   <div class=\"container\" fxLayout=\"column\" fxFlex=\"60%\" fxFlex.xs=\"80%\">\r\n       <div class=\"marginInfo\">\r\n          <p class=\"user\">Usuario</p>\r\n          <input class = \"inpUser\" type=\"email\" name=\"user\" [(ngModel)]=\"user\">\r\n          <br>\r\n          <p class=\"pass\">Contraseña</p>\r\n          <input class = \"inpPass\" name=\"pass\" [(ngModel)]=\"pass\">\r\n          <br>\r\n          <div class=\"buttondiv\">\r\n            <button type=\"submit\" [routerLink]=\"['/search']\" mat-button class=\"btnLogin\" style=\"align-self: center;\">Iniciar Sesion</button>\r\n          </div>\r\n          <p class=\"crearcuenta\">\r\n             <label>¿No tenés cuenta?</label>\r\n             <a [routerLink]=\"['/create-account']\"  style=\"margin-left: 0.5em\" >Crear cuenta</a>\r\n   \r\n          </p>\r\n       </div>\r\n       <a [routerLink]=\"['/test-rest-api']\">test</a>\r\n    </div>\r\n    <div fxLayout=\"column\" fxFlex=\"20%\" class=\"margin-right\" fxFlex.xs=\"10%\"></div>\r\n\r\n</form>\r\n");
 
 /***/ }),
 
@@ -436,23 +436,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 
 
 let AppComponent = class AppComponent {
-    constructor(http) {
+    constructor(http, router) {
         this.http = http;
+        this.router = router;
         this.title = 'Cinnemon';
         this.bodyFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email,
         ]);
     }
+    ngOnInit() {
+        let currentUrl = this.router.url;
+    }
 };
 AppComponent.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -661,7 +668,7 @@ HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n.container{\r\n    margin-top: 4%;\r\n}\r\n.title{\r\n    font-family: 'Oswald', sans-serif;\r\n    color: white;\r\n    font-size: xx-large;\r\n    margin-bottom: 5%;\r\n}\r\n.data-form{\r\n    background-color: rgb(28, 28, 26);\r\n    text-align: center;\r\n}\r\n.inpPass{\r\n    margin-top: 10%;\r\n}\r\n.btnCrearCuenta{\r\n    margin-top: 6%;\r\n    background-color: rgb(89, 89, 83);\r\n    font-family: 'Oswald', sans-serif;\r\n    font-size: large;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3JlYXRlLWFjY291bnQvY3JlYXRlLWFjY291bnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxjQUFjO0FBQ2xCO0FBQ0E7SUFDSSxpQ0FBaUM7SUFDakMsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixpQkFBaUI7QUFDckI7QUFDQTtJQUNJLGlDQUFpQztJQUNqQyxrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLGVBQWU7QUFDbkI7QUFDQTtJQUNJLGNBQWM7SUFDZCxpQ0FBaUM7SUFDakMsaUNBQWlDO0lBQ2pDLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2NyZWF0ZS1hY2NvdW50L2NyZWF0ZS1hY2NvdW50LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLmNvbnRhaW5lcntcclxuICAgIG1hcmdpbi10b3A6IDQlO1xyXG59XHJcbi50aXRsZXtcclxuICAgIGZvbnQtZmFtaWx5OiAnT3N3YWxkJywgc2Fucy1zZXJpZjtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtc2l6ZTogeHgtbGFyZ2U7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcclxufVxyXG4uZGF0YS1mb3Jte1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI4LCAyOCwgMjYpO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbi5pbnBQYXNze1xyXG4gICAgbWFyZ2luLXRvcDogMTAlO1xyXG59XHJcbi5idG5DcmVhckN1ZW50YXtcclxuICAgIG1hcmdpbi10b3A6IDYlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDg5LCA4OSwgODMpO1xyXG4gICAgZm9udC1mYW1pbHk6ICdPc3dhbGQnLCBzYW5zLXNlcmlmO1xyXG4gICAgZm9udC1zaXplOiBsYXJnZTtcclxufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("form{\r\n}\r\n.container{\r\n    height: 100%;\r\n    margin-top: 4%;\r\n}\r\n.title{\r\n    font-family: 'Oswald', sans-serif;\r\n    color: white;\r\n    font-size: xx-large;\r\n    margin-bottom: 5%;\r\n}\r\n.data-form{\r\n    background-color: rgb(28, 28, 26);\r\n    text-align: center;\r\n}\r\n.inpPass{\r\n    margin-top: 10%;\r\n}\r\n.btnCrearCuenta{\r\n    margin-top: 6%;\r\n    background-color: rgb(89, 89, 83);\r\n    font-family: 'Oswald', sans-serif;\r\n    font-size: large;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3JlYXRlLWFjY291bnQvY3JlYXRlLWFjY291bnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7SUFDSSxZQUFZO0lBQ1osY0FBYztBQUNsQjtBQUNBO0lBQ0ksaUNBQWlDO0lBQ2pDLFlBQVk7SUFDWixtQkFBbUI7SUFDbkIsaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxpQ0FBaUM7SUFDakMsa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxlQUFlO0FBQ25CO0FBQ0E7SUFDSSxjQUFjO0lBQ2QsaUNBQWlDO0lBQ2pDLGlDQUFpQztJQUNqQyxnQkFBZ0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jcmVhdGUtYWNjb3VudC9jcmVhdGUtYWNjb3VudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZm9ybXtcclxufVxyXG4uY29udGFpbmVye1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgbWFyZ2luLXRvcDogNCU7XHJcbn1cclxuLnRpdGxle1xyXG4gICAgZm9udC1mYW1pbHk6ICdPc3dhbGQnLCBzYW5zLXNlcmlmO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgZm9udC1zaXplOiB4eC1sYXJnZTtcclxuICAgIG1hcmdpbi1ib3R0b206IDUlO1xyXG59XHJcbi5kYXRhLWZvcm17XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjgsIDI4LCAyNik7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmlucFBhc3N7XHJcbiAgICBtYXJnaW4tdG9wOiAxMCU7XHJcbn1cclxuLmJ0bkNyZWFyQ3VlbnRhe1xyXG4gICAgbWFyZ2luLXRvcDogNiU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoODksIDg5LCA4Myk7XHJcbiAgICBmb250LWZhbWlseTogJ09zd2FsZCcsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXNpemU6IGxhcmdlO1xyXG59Il19 */");
 
 /***/ }),
 
@@ -678,12 +685,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../users.service */ "./src/app/users.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let CreateAccountComponent = class CreateAccountComponent {
-    constructor(userService) {
+    constructor(userService, router) {
         this.userService = userService;
+        this.router = router;
         this.userService.getUsers()
             .subscribe(users => {
             this.users = users;
@@ -693,6 +703,11 @@ let CreateAccountComponent = class CreateAccountComponent {
     }
     addUser(event) {
         event.preventDefault();
+        if (this.user == "" || this.pass == "") {
+            alert("Contraseña y/o usuario incorrecto.");
+            return;
+        }
+        ;
         const newUser = {
             user: this.user,
             pass: this.pass
@@ -703,10 +718,12 @@ let CreateAccountComponent = class CreateAccountComponent {
             this.user = "";
             this.pass = "";
         });
+        this.router.navigate(['/search']);
     }
 };
 CreateAccountComponent.ctorParameters = () => [
-    { type: _users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }
+    { type: _users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 CreateAccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -729,7 +746,7 @@ CreateAccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".inpUser{\r\n    width: 35em;\r\n    height: 2em;\r\n}\r\n.inpPass{\r\n    width: 35em;\r\n    height: 2em;\r\n}\r\n.marginInfo{\r\n    margin-left: 18em;\r\n}\r\n.user{\r\n    font-family: 'Fjalla One', sans-serif;\r\n    font-size: 1.2em;\r\n    margin-top: 4em;\r\n\r\n }\r\n.pass{\r\n    font-family: 'Fjalla One', sans-serif;\r\n    font-size: 1.2em;\r\n    margin-top: 4em;\r\n }\r\n.btnLogin{\r\n    color: black;\r\n    background-color: cyan;\r\n    margin-top: 2em;\r\n    margin-left: 10em;\r\n    font-size: 1.3em;\r\n    font-family: 'Fjalla One', sans-serif;\r\n}\r\n.crearcuenta{\r\n    margin-bottom: 5%;\r\n    margin-top: 1.5em;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxXQUFXO0FBQ2Y7QUFDQTtJQUNJLFdBQVc7SUFDWCxXQUFXO0FBQ2Y7QUFDQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0kscUNBQXFDO0lBQ3JDLGdCQUFnQjtJQUNoQixlQUFlOztDQUVsQjtBQUNBO0lBQ0cscUNBQXFDO0lBQ3JDLGdCQUFnQjtJQUNoQixlQUFlO0NBQ2xCO0FBQ0Q7SUFDSSxZQUFZO0lBQ1osc0JBQXNCO0lBQ3RCLGVBQWU7SUFDZixpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLHFDQUFxQztBQUN6QztBQUNBO0lBQ0ksaUJBQWlCO0lBQ2pCLGlCQUFpQjtBQUNyQiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW5wVXNlcntcclxuICAgIHdpZHRoOiAzNWVtO1xyXG4gICAgaGVpZ2h0OiAyZW07XHJcbn1cclxuLmlucFBhc3N7XHJcbiAgICB3aWR0aDogMzVlbTtcclxuICAgIGhlaWdodDogMmVtO1xyXG59XHJcbi5tYXJnaW5JbmZve1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE4ZW07XHJcbn1cclxuLnVzZXJ7XHJcbiAgICBmb250LWZhbWlseTogJ0ZqYWxsYSBPbmUnLCBzYW5zLXNlcmlmO1xyXG4gICAgZm9udC1zaXplOiAxLjJlbTtcclxuICAgIG1hcmdpbi10b3A6IDRlbTtcclxuXHJcbiB9XHJcbiAucGFzc3tcclxuICAgIGZvbnQtZmFtaWx5OiAnRmphbGxhIE9uZScsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXNpemU6IDEuMmVtO1xyXG4gICAgbWFyZ2luLXRvcDogNGVtO1xyXG4gfVxyXG4uYnRuTG9naW57XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjeWFuO1xyXG4gICAgbWFyZ2luLXRvcDogMmVtO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEwZW07XHJcbiAgICBmb250LXNpemU6IDEuM2VtO1xyXG4gICAgZm9udC1mYW1pbHk6ICdGamFsbGEgT25lJywgc2Fucy1zZXJpZjtcclxufVxyXG4uY3JlYXJjdWVudGF7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA1JTtcclxuICAgIG1hcmdpbi10b3A6IDEuNWVtO1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".inpUser{\r\n    width: 100%;\r\n    height: 2em;\r\n}\r\n.inpPass{\r\n    width: 100%;\r\n    height: 2em;\r\n}\r\n.user{\r\n    font-family: 'Fjalla One', sans-serif;\r\n    font-size: 1.2em;\r\n    margin-top: 4em;\r\n\r\n }\r\n.pass{\r\n    font-family: 'Fjalla One', sans-serif;\r\n    font-size: 1.2em;\r\n    margin-top: 4em;\r\n }\r\n.btnLogin{\r\n    color: black;\r\n    background-color: cyan;\r\n    margin-top: 2em;\r\n    font-size: 1.3em;\r\n    font-family: 'Fjalla One', sans-serif;\r\n\r\n    \r\n}\r\n.crearcuenta{\r\n    margin-bottom: 5%;\r\n    margin-top: 1.5em;\r\n}\r\n.container{\r\n    width: 100%;\r\n}\r\n.marginInfo{\r\n    width: 100%;\r\n}\r\n.buttondiv{\r\n    width: 100%;\r\n    text-align: center;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxXQUFXO0FBQ2Y7QUFDQTtJQUNJLFdBQVc7SUFDWCxXQUFXO0FBQ2Y7QUFDQTtJQUNJLHFDQUFxQztJQUNyQyxnQkFBZ0I7SUFDaEIsZUFBZTs7Q0FFbEI7QUFDQTtJQUNHLHFDQUFxQztJQUNyQyxnQkFBZ0I7SUFDaEIsZUFBZTtDQUNsQjtBQUNEO0lBQ0ksWUFBWTtJQUNaLHNCQUFzQjtJQUN0QixlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLHFDQUFxQzs7O0FBR3pDO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksV0FBVztJQUNYLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW5wVXNlcntcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAyZW07XHJcbn1cclxuLmlucFBhc3N7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMmVtO1xyXG59XHJcbi51c2Vye1xyXG4gICAgZm9udC1mYW1pbHk6ICdGamFsbGEgT25lJywgc2Fucy1zZXJpZjtcclxuICAgIGZvbnQtc2l6ZTogMS4yZW07XHJcbiAgICBtYXJnaW4tdG9wOiA0ZW07XHJcblxyXG4gfVxyXG4gLnBhc3N7XHJcbiAgICBmb250LWZhbWlseTogJ0ZqYWxsYSBPbmUnLCBzYW5zLXNlcmlmO1xyXG4gICAgZm9udC1zaXplOiAxLjJlbTtcclxuICAgIG1hcmdpbi10b3A6IDRlbTtcclxuIH1cclxuLmJ0bkxvZ2lue1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogY3lhbjtcclxuICAgIG1hcmdpbi10b3A6IDJlbTtcclxuICAgIGZvbnQtc2l6ZTogMS4zZW07XHJcbiAgICBmb250LWZhbWlseTogJ0ZqYWxsYSBPbmUnLCBzYW5zLXNlcmlmO1xyXG5cclxuICAgIFxyXG59XHJcbi5jcmVhcmN1ZW50YXtcclxuICAgIG1hcmdpbi1ib3R0b206IDUlO1xyXG4gICAgbWFyZ2luLXRvcDogMS41ZW07XHJcbn1cclxuLmNvbnRhaW5lcntcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcbi5tYXJnaW5JbmZve1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuLmJ1dHRvbmRpdntcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59Il19 */");
 
 /***/ }),
 

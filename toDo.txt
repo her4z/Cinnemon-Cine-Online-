@@ -1,3 +1,0 @@
-hacer que las paginas sean responsives menos crear cuenta y login|
-arreglar bug apretar icono en login inicia sesion ????? esperar a hacer la Session del usuario para arreglarlo.
-

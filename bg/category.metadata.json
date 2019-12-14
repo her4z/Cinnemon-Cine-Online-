@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"cinnemon.category"}],"uuid":"69b0b2d704f041ec90360c4af27d6b02"}
